@@ -33,7 +33,7 @@ export function setUser(username, email, profilePic) {
 export function login(username, password) {
     return function (dispatch) {
         setTimeout(() => {
-            dispatch(setUser('SomethingOn', 'greg@somethingon.ca', 'https://pbs.twimg.com/profile_images/428238569077878785/7PZsX4yA_400x400.png'));
+            dispatch(setUser('SomethingOn', 'greg@somethingon.ca', 'https://avatars2.githubusercontent.com/u/2718382?v=3&u=bf0e35a9396143fdfc7bab4e6f3c5b53941fcd2f&s=400'));
         }, 2000); /* simulate API call loading time */
     }
 }
