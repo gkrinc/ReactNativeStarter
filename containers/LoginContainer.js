@@ -1,9 +1,12 @@
+// Presentational Components vs Containers - http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../actionCreators';
 import Login from '../components/Login/Login';
 
+// Map state (redux store values) to component props
 const mapStateToProps = (
     state
 ) => {
@@ -15,12 +18,15 @@ const mapStateToProps = (
     };
 };
 
+// Bind all action creators to component props. The component that this container connects to (Login) will have access
+// to all of the action creator functions as props
 const mapDispatchToProps = (
     dispatch
 ) => {
     return bindActionCreators(actionCreators, dispatch);
 };
 
+// Merge props is where we write our business/app logic functions and pass them to the connected component as props
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
 
     let {
@@ -31,19 +37,16 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     } = dispatchProps;
 
     onLoginSubmit = () => {
-        console.log('onLoginSubmit');
         setLoginLoading(true);
 
         login(stateProps.username, stateProps.password);
     };
 
     onPasswordChange = (event) => {
-        console.log('onPasswordChange');
         setLoginPassword(event.target.value);
     };
 
     onUsernameChange = (event) => {
-        console.log('onUsernameChange');
         setLoginUsername(event.target.value);
     };    
 

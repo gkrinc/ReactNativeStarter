@@ -8,6 +8,8 @@ const mapStateToProps = (
     state
 ) => {
     return {
+        email: state.user.email,
+        profilePic: state.user.profilePic,
         username: state.user.username,
     };
 };

@@ -5,13 +5,15 @@ export default function user(state = [], action) {
         case actionTypes.USER.SET_USER:
             return {
                 ...state,
-                username: action.username,
+                email: action.email,
                 profilePic: action.profilePic,
+                username: action.username,                
             };
         case actionTypes.USER.LOGOUT:
             return {
-                username: '',
+                email: '',
                 profilePic: '',
+                username: '',                
             };
         default:
             return state;

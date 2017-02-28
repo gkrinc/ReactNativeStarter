@@ -21,18 +21,19 @@ export function setLoginPassword(password) {
     };
 }
 
-export function setUser(username, profilePic) {
+export function setUser(username, email, profilePic) {
     return {
         type: actionTypes.USER.SET_USER,
-        username,
+        email,
         profilePic,
+        username,        
     };
 }
 
 export function login(username, password) {
     return function (dispatch) {
         setTimeout(() => {
-            dispatch(setUser('SomethingOn', 'https://pbs.twimg.com/profile_images/428238569077878785/7PZsX4yA_400x400.png'));
+            dispatch(setUser('SomethingOn', 'greg@somethingon.ca', 'https://pbs.twimg.com/profile_images/428238569077878785/7PZsX4yA_400x400.png'));
         }, 2000); /* simulate API call loading time */
     }
 }

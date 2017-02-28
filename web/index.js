@@ -10,8 +10,16 @@ const Root = React.createClass({
     render() {
         return (
             <Provider store={store}>
-                <div>
-                    <h1>ReactNativeStater</h1>
+                <div style={{ position: 'absolute',
+                              width: '100%',
+                              height: '100%',
+                              background: 'linear-gradient(#333334, #1C1C1C)' }}>
+                    <h1 style={{ fontFamily: 'Raleway',
+                                 fontSize: '24px',
+                                 fontWeight: 'bold',
+                                 textAlign: 'center',
+                                 color: '#ffffff',
+                                 padding: '24px 0 32px 0' }}>ReactNativeStarter</h1>
                     <LoginContainer />
                     <UserProfileContainer />
                 </div>
