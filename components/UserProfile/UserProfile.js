@@ -15,7 +15,7 @@ export default React.createClass({
         if (!username) return null;
 
         return (
-            <div style={{ fontFamily: 'Raleway', margin: '0 16px' }}>                
+            <div style={{ fontFamily: 'Raleway', padding: '0 16px' }}>                
                 <div style={{ textAlign: 'right' }}>
                     <button onClick={logout}
                             style={{ backgroundColor: '#766E5C',
